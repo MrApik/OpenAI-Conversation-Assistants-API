@@ -164,6 +164,12 @@ class OpenAIConversationEntity(
             continue_conversation=chat_log.continue_conversation,
         )
 
+    async def async_process(
+            self, user_input: conversation.ConversationInput
+    ) -> conversation.ConversationResult:
+        """Process conversation input."""
+        return await self._async_handle_message(user_input, self.conversation_tracker.get_log(user_input))
+
     async def _async_handle_chat_log(self, chat_log: conversation.ChatLog) -> None:
         client = self.entry.runtime_data
         options = self.entry.options
