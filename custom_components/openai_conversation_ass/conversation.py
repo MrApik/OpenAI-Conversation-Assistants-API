@@ -167,8 +167,14 @@ class OpenAIConversationEntity(
     async def async_process(
             self, user_input: conversation.ConversationInput
     ) -> conversation.ConversationResult:
-        """Process conversation input."""
-        chat_log = await conversation.get_chat_log(self.hass, self, user_input)
+        """Process user input."""
+        chat_log = conversation.ChatLog(
+            agent=self,
+            conversation_id=user_input.conversation_id,
+            language=user_input.language,
+        )
+        chat_log.async_add_user_message(user_input.text)
+
         return await self._async_handle_message(user_input, chat_log)
 
     async def _async_handle_chat_log(self, chat_log: conversation.ChatLog) -> None:
