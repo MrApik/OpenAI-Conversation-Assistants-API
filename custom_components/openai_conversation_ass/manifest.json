@@ -2,7 +2,7 @@
   "domain": "openai_conversation_ass",
   "name": "OpenAI Conversation Ass",
   "after_dependencies": ["assist_pipeline", "intent"],
-  "codeowners": ["@balloob", "@MrAp1k"],
+  "codeowners": ["@MrAp1k"],
   "config_flow": true,
   "dependencies": ["conversation"],
   "documentation": "https://github.com/MrApik/OpenAI-Conversation-Assistants-API",
