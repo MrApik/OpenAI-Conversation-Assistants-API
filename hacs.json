@@ -1,10 +1,5 @@
 {
   "name": "OpenAI Conversation (Assistants API)",
-  "domain": "openai_conversation_ass",
-  "country": "global",
   "homeassistant": "2023.5.0",
-  "codeowners": ["@MrApik"],
-  "documentation": "https://github.com/MrApik/OpenAI-Conversation-Assistants-API",
-  "type": "integration",
   "render_readme": true
 }
