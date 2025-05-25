@@ -172,7 +172,7 @@ class OpenAIConversationEntity(
             user_input.conversation_id,
             user_input.language,
         )
-        chat_log.async_add_user_message(user_input.text)
+        chat_log.async_add_user_content(user_input.text)
 
         return await self._async_handle_message(user_input, chat_log)
 
