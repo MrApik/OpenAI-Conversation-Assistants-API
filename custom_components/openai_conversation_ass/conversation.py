@@ -169,9 +169,8 @@ class OpenAIConversationEntity(
     ) -> conversation.ConversationResult:
         """Process user input."""
         chat_log = conversation.ChatLog(
-            agent=self,
-            conversation_id=user_input.conversation_id,
-            language=user_input.language,
+            user_input.conversation_id,
+            user_input.language,
         )
         chat_log.async_add_user_message(user_input.text)
 
