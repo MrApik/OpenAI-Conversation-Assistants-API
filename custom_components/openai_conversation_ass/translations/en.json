@@ -3,14 +3,15 @@
     "step": {
       "user": {
         "data": {
-          "api_key": "[%key:common::config_flow::data::api_key%]"
+          "assistant_id": "Assistant ID",
+          "api_key": "API Key"
         }
       }
     },
     "error": {
-      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
-      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
-      "unknown": "[%key:common::config_flow::error::unknown%]"
+      "cannot_connect": "Cannot connect",
+      "invalid_auth": "Invalid auth (API Key)",
+      "unknown": "Unknown error"
     }
   },
   "options": {
@@ -18,11 +19,11 @@
       "init": {
         "data": {
           "prompt": "Instructions",
-          "chat_model": "[%key:common::generic::model%]",
+          "chat_model": "Chat model",
           "max_tokens": "Maximum tokens to return in response",
           "temperature": "Temperature",
           "top_p": "Top P",
-          "llm_hass_api": "[%key:common::config_flow::data::llm_hass_api%]",
+          "llm_hass_api": "LLM HASS API",
           "recommended": "Recommended model settings",
           "reasoning_effort": "Reasoning effort",
           "web_search": "Enable web search",
@@ -46,16 +47,16 @@
   "selector": {
     "reasoning_effort": {
       "options": {
-        "low": "[%key:common::state::low%]",
-        "medium": "[%key:common::state::medium%]",
-        "high": "[%key:common::state::high%]"
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
       }
     },
     "search_context_size": {
       "options": {
-        "low": "[%key:common::state::low%]",
-        "medium": "[%key:common::state::medium%]",
-        "high": "[%key:common::state::high%]"
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
       }
     }
   },
